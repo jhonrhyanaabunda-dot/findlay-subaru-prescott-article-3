@@ -373,7 +373,7 @@
     align-items: stretch;
   }
   .trim {
-    padding: 18px 20px 14px;
+    padding: 14px 18px 12px;
     display: flex; flex-direction: column; gap: 0;
     position: relative;
     border-right: 1px solid var(--rule);
@@ -386,7 +386,7 @@
   .trim.wilderness .engine { color: var(--blue-deep); }
   .trim .badge { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; white-space: normal; text-align: left; }
   .trim.flagship .badge { color: var(--blue); }
-  .trim .name { font-family: var(--display); font-size: 24px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); line-height: 1.18; margin: 0 0 10px; }
+  .trim .name { font-family: var(--display); font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); line-height: 1.2; margin: 0 0 10px; text-wrap: balance; }
   .trim .equip { font-size: 13px; color: var(--ink-soft); line-height: 1.55; margin: 0 0 14px; }
   .trim .inv-link {
     display: inline-flex;
@@ -405,9 +405,9 @@
     transition: color 0.15s ease, gap 0.2s ease;
     -webkit-tap-highlight-color: rgba(25,113,212,.10);
   }
-  .trim .inv-link:hover.trim .inv-link:focus { color: var(--ink); gap: 10px; }
-  .trim.wilderness .inv-link.trim.flagship .inv-link { color: var(--blue-deep); }
-  .trim.wilderness .inv-link:hover.trim.flagship .inv-link:hover { color: var(--ink); }
+  .trim .inv-link:hover, .trim .inv-link:focus { color: var(--ink); gap: 10px; }
+  .trim.wilderness .inv-link, .trim.flagship .inv-link { color: var(--blue-deep); }
+  .trim.wilderness .inv-link:hover, .trim.flagship .inv-link:hover { color: var(--ink); }
 
   /* ---------- Inline price links to live inventory ---------- */
   a.price-link {
@@ -839,40 +839,41 @@
     pointer-events: none;
   }
   .findlay-band .wrap { position: relative; }
-  .findlay-band .eyebrow { color: #6db3ff; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
+  .findlay-band .eyebrow { color: #6db3ff; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 24px; font-weight: 600; }
   .findlay-band h2 {
     font-family: var(--display); font-weight: 700;
-    font-size: clamp(24px, 4.4vw, 54px); line-height: 1.12; letter-spacing: -0.02em;
-    margin: 0 0 32px; max-width: 900px; text-wrap: balance;
+    font-size: clamp(32px, 5.6vw, 56px); line-height: 1.08; letter-spacing: -0.025em;
+    margin: 0 0 36px; max-width: 900px; text-wrap: balance;
     overflow-wrap: break-word; word-wrap: break-word;
+    color: var(--white);
   }
   .findlay-band h2 em { font-style: normal; color: #9cc8ff; font-weight: 700; }
   .trust-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
-    margin-top: 50px;
+    margin-top: 48px;
     padding-top: 40px;
     border-top: 1px solid rgba(255,255,255,.15);
     align-items: start;
   }
-  .trust-grid .item { display: flex; flex-direction: column; align-items: center; text-align: center; }
-  .trust-grid .item .num { font-family: var(--display); font-size: 56px; font-weight: 500; line-height: 1; color: var(--white); letter-spacing: -0.02em; font-feature-settings: "lnum"; min-height: 56px; display: flex; align-items: baseline; justify-content: center; }
-  .trust-grid .item .num small { font-size: 22px; color: #9cc8ff; }
-  .trust-grid .item .lbl { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-top: 16px; line-height: 1.5; min-height: 54px; }
+  .trust-grid .item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+  .trust-grid .item .num { font-family: var(--display); font-size: 56px; font-weight: 500; line-height: 1; color: var(--white); letter-spacing: -0.02em; font-feature-settings: "lnum"; display: flex; align-items: baseline; justify-content: center; gap: 4px; }
+  .trust-grid .item .num small { font-size: 20px; color: #9cc8ff; font-weight: 500; }
+  .trust-grid .item .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.7); line-height: 1.5; margin: 0; max-width: 22ch; }
 
   .findlay-extras {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     gap: 32px;
-    margin-top: 50px;
+    margin-top: 48px;
     align-items: start;
   }
   .findlay-extras > div { display: flex; flex-direction: column; }
-  .findlay-extras h5 { font-family: var(--display); font-size: 20px; font-weight: 500; margin: 0 0 14px; color: var(--white); min-height: 28px; }
-  .findlay-extras p { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.6; margin: 0 0 10px; }
+  .findlay-extras h5 { font-family: var(--display); font-size: 22px; font-weight: 600; margin: 0 0 14px; color: var(--white); letter-spacing: -0.01em; }
+  .findlay-extras p { color: rgba(255,255,255,.78); font-size: 15px; line-height: 1.6; margin: 0 0 10px; }
   .findlay-extras p:last-child { margin-bottom: 0; }
-  .findlay-extras strong { color: var(--white); font-weight: 500; }
+  .findlay-extras strong { color: var(--white); font-weight: 600; }
   .findlay-extras a {
     color: var(--white);
     text-decoration: none;
@@ -880,7 +881,7 @@
     font-weight: 600;
     transition: border-color 0.15s ease, color 0.15s ease;
   }
-  .findlay-extras a:hover.findlay-extras a:focus {
+  .findlay-extras a:hover, .findlay-extras a:focus {
     color: #ffffff;
     border-bottom-color: #ffffff;
   }
@@ -1208,12 +1209,12 @@
         <div class="glance">
           <h4>What we recommend, at a glance</h4>
           <dl>
-            <div class="row"><dt>Forester</dt><dd>~25" seat height · easiest in/out</dd></div>
-            <div class="row"><dt>Outback</dt><dd>~24 to 25" seat · long-haul comfort</dd></div>
-            <div class="row"><dt>Crosstrek</dt><dd>~23" seat · downtown-friendly</dd></div>
+            <div class="row"><dt>Forester</dt><dd>25" seat height · easiest in/out</dd></div>
+            <div class="row"><dt>Outback</dt><dd>24 to 25" seat · long-haul comfort</dd></div>
+            <div class="row"><dt>Crosstrek</dt><dd>23" seat · downtown-friendly</dd></div>
             <div class="row"><dt>EyeSight</dt><dd>Standard on every 2026 trim</dd></div>
             <div class="row"><dt>2026 IIHS</dt><dd>Forester · Outback · Ascent: TSP+</dd></div>
-            <div class="row"><dt>Yavapai 65+</dt><dd>~⅓ of the county</dd></div>
+            <div class="row"><dt>Yavapai 65+</dt><dd>⅓ of the county</dd></div>
             <div class="row"><dt>Reviewed</dt><dd>May 2026 · re-verify within 30 days</dd></div>
             <div class="row"><dt>CPO</dt><dd>152-pt inspection · 7yr/100k powertrain</dd></div>
           </dl>
@@ -1265,19 +1266,19 @@
 
         <div class="trims">
           <article class="trim">
-            <div class="engine-row"><span class="engine">~25" seat</span><span class="badge">Easiest in/out</span></div>
+            <div class="engine-row"><span class="engine">25" seat</span><span class="badge">Easiest in/out</span></div>
             <h4 class="name">Forester</h4>
             <p class="equip">Highest seat in the lineup. Upright glass and slim A-pillars give the cleanest forward visibility, useful at intersections and on left turns. EyeSight standard. 2026 IIHS TSP+.</p>
             <a class="inv-link" href="/inventory/new/subaru/forester" aria-label="See Forester inventory">See Forester inventory <span aria-hidden="true">→</span></a>
           </article>
           <article class="trim wilderness">
-            <div class="engine-row"><span class="engine">~24 to 25"</span><span class="badge">Long-haul</span></div>
+            <div class="engine-row"><span class="engine">24 to 25"</span><span class="badge">Long-haul</span></div>
             <h4 class="name">Outback</h4>
             <p class="equip">Best long-haul Subaru. 12.1" center screen, 12.3" digital cluster, adjustable text size, physical climate knobs on Limited. 2026 IIHS TSP+. Up to 3,500 lb tow on XT or Wilderness.</p>
             <a class="inv-link" href="/inventory/new/subaru/outback" aria-label="See Outback inventory">See Outback inventory <span aria-hidden="true">→</span></a>
           </article>
           <article class="trim">
-            <div class="engine-row"><span class="engine">~23" seat</span><span class="badge">Compact</span></div>
+            <div class="engine-row"><span class="engine">23" seat</span><span class="badge">Compact</span></div>
             <h4 class="name">Crosstrek</h4>
             <p class="equip">Smaller footprint, parallel-parker friendly. Slips into a tight space at the courthouse square; still tall enough that you're not folding into it. EyeSight standard.</p>
             <a class="inv-link" href="/inventory/new/subaru/crosstrek" aria-label="See Crosstrek inventory">See Crosstrek inventory <span aria-hidden="true">→</span></a>
@@ -1296,7 +1297,7 @@
           </article>
           <article class="trim">
             <div class="engine-row"><span class="engine">3 gens</span><span class="badge">Repeat buyers</span></div>
-            <h4 class="name">Returning Subaru owners</h4>
+            <h4 class="name">Repeat Subaru owners</h4>
             <p class="equip">Three-generation Subaru families on our books. Many of our retired customers are on their 2nd, 3rd, or even 4th Subaru with us. Ask for John Van Winkle (Love Encore).</p>
             <a class="inv-link" href="/staff" aria-label="See our staff">Meet the team <span aria-hidden="true">→</span></a>
           </article>
@@ -1370,7 +1371,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr><th>Seat height (approx.)</th><td class="featured">~25 in</td><td>~24 to 25 in</td><td>~23 in</td></tr>
+              <tr><th>Seat height (approx.)</th><td class="featured">25 in</td><td>24 to 25 in</td><td>23 in</td></tr>
               <tr><th>Ground clearance</th><td class="featured">8.7" (9.3" Wilderness)</td><td>8.7" (9.5" Wilderness)</td><td>8.7" (9.3" Wilderness)</td></tr>
               <tr><th>EyeSight standard</th><td class="featured">Yes, all trims</td><td>Yes, all trims</td><td>Yes, all trims</td></tr>
               <tr><th>2026 IIHS rating</th><td class="featured">Top Safety Pick+</td><td>Top Safety Pick+</td><td>No 2026 award</td></tr>
@@ -1475,7 +1476,7 @@
       <div class="chip">
         <div class="lbl">2026 IIHS Top Safety Pick+</div>
         <strong style="font-size:18px; line-height:1.2;">Forester · Outback · Ascent</strong>
-        <div class="sub">EyeSight standard on every 2026 trim · ~50% rear-end crash reduction (IIHS)</div>
+        <div class="sub">EyeSight standard on every 2026 trim · 50% rear-end crash reduction (IIHS)</div>
       </div>
       <div class="chip">
         <div class="lbl">CPO for retirees</div>
@@ -1494,7 +1495,7 @@
 
     <div class="trust-grid">
       <div class="item">
-        <div class="num">~⅓</div>
+        <div class="num">⅓</div>
         <div class="lbl">Yavapai County residents<br>aged 65 or older · Census</div>
       </div>
       <div class="item">
@@ -1638,7 +1639,7 @@
         <ul class="ext">
           <li><a href="https://www.subaru.com/engineering/eyesight.html" target="_blank" rel="noopener">Subaru of America · EyeSight feature documentation</a></li>
           <li><a href="https://www.iihs.org/ratings/top-safety-picks" target="_blank" rel="noopener">IIHS · 2026 Top Safety Picks</a></li>
-          <li><a href="https://www.iihs.org/news/detail/front-crash-prevention-slashes-police-reported-rear-end-crashes" target="_blank" rel="noopener">IIHS · Front crash prevention research (~50% rear-end reduction)</a></li>
+          <li><a href="https://www.iihs.org/news/detail/front-crash-prevention-slashes-police-reported-rear-end-crashes" target="_blank" rel="noopener">IIHS · Front crash prevention research (50% rear-end reduction)</a></li>
           <li><a href="https://www.iihs.org/ratings/vehicle/subaru/crosstrek-4-door-wagon/2026" target="_blank" rel="noopener">IIHS · 2026 Subaru Crosstrek ratings</a></li>
           <li><a href="https://media.subaru.com/pressrelease/2435/subaru-earns-three-2026-iihs-top-safety-pick" target="_blank" rel="noopener">Subaru U.S. Media Center · 2026 IIHS Top Safety Pick+ awards</a></li>
           <li><a href="https://www.census.gov/quickfacts/fact/table/yavapaicountyarizona" target="_blank" rel="noopener">U.S. Census Bureau QuickFacts · Yavapai County, Arizona (median age &amp; 65+ share)</a></li>
@@ -1996,7 +1997,7 @@
       },
       "fuelEfficiency": {"@type": "QuantitativeValue", "value": 27, "unitText": "MPG"},
       "trailerWeight": {"@type": "QuantitativeValue", "value": 3500, "unitCode": "LBR"},
-      "description": "Best long-haul Subaru for the Phoenix specialist drive. ~24 to 25-inch seat height, 12.1-inch center screen with adjustable text size, physical climate knobs on Limited, 34.6 cu ft of cargo behind the second row, EyeSight standard, IIHS Top Safety Pick+ for 2026. Up to 3,500 lb of towing on the Wilderness or XT.",
+      "description": "Best long-haul Subaru for the Phoenix specialist drive. 24 to 25-inch seat height, 12.1-inch center screen with adjustable text size, physical climate knobs on Limited, 34.6 cu ft of cargo behind the second row, EyeSight standard, IIHS Top Safety Pick+ for 2026. Up to 3,500 lb of towing on the Wilderness or XT.",
       "offers": {
         "@type": "Offer",
         "availability": "https://schema.org/InStock",
@@ -2021,7 +2022,7 @@
       "fuelType": "Gasoline",
       "fuelEfficiency": {"@type": "QuantitativeValue", "value": 29, "unitText": "MPG"},
       "trailerWeight": {"@type": "QuantitativeValue", "value": 3500, "unitCode": "LBR"},
-      "description": "Smaller-footprint Subaru for retirees who want a tall ride height (~23-inch seat) without a full-size SUV. Parks on Gurley Street downtown. Standard Symmetrical AWD, EyeSight standard. Wilderness trim: 9.3-inch clearance, 3,500 lb tow. The 2026 Crosstrek did not earn a 2026 IIHS Top Safety Pick award.",
+      "description": "Smaller-footprint Subaru for retirees who want a tall ride height (23-inch seat) without a full-size SUV. Parks on Gurley Street downtown. Standard Symmetrical AWD, EyeSight standard. Wilderness trim: 9.3-inch clearance, 3,500 lb tow. The 2026 Crosstrek did not earn a 2026 IIHS Top Safety Pick award.",
       "offers": {
         "@type": "Offer",
         "availability": "https://schema.org/InStock",
@@ -2157,21 +2158,21 @@
           "position": 1,
           "name": "2026 Subaru Forester",
           "url": "https://findlay-subaru-prescott-article-3.vercel.app/#forester-2026",
-          "description": "Editor's pick for most Prescott retirees. ~25-inch seat height (easiest in/out), best forward visibility, IIHS Top Safety Pick+ for 2026, EyeSight standard, Symmetrical AWD standard."
+          "description": "Editor's pick for most Prescott retirees. 25-inch seat height (easiest in/out), best forward visibility, IIHS Top Safety Pick+ for 2026, EyeSight standard, Symmetrical AWD standard."
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "2026 Subaru Outback",
           "url": "https://findlay-subaru-prescott-article-3.vercel.app/#outback-2026",
-          "description": "Best long-haul Subaru, built for the I-17 drive to a Phoenix specialist. ~24 to 25-inch seat, 34.6 cu ft cargo, IIHS Top Safety Pick+ for 2026. Up to 3,500 lb tow on Wilderness or XT trims."
+          "description": "Best long-haul Subaru, built for the I-17 drive to a Phoenix specialist. 24 to 25-inch seat, 34.6 cu ft cargo, IIHS Top Safety Pick+ for 2026. Up to 3,500 lb tow on Wilderness or XT trims."
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "2026 Subaru Crosstrek",
           "url": "https://findlay-subaru-prescott-article-3.vercel.app/#crosstrek-2026",
-          "description": "Smallest of the three. ~23-inch seat: still much taller than a sedan. Easiest to park downtown on Gurley Street. EyeSight standard. The 2026 Crosstrek did not earn a 2026 IIHS Top Safety Pick award."
+          "description": "Smallest of the three. 23-inch seat: still much taller than a sedan. Easiest to park downtown on Gurley Street. EyeSight standard. The 2026 Crosstrek did not earn a 2026 IIHS Top Safety Pick award."
         }
       ]
     },
